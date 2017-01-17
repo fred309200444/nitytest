@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ship_control : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject Bullet;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -26,6 +28,13 @@ public class ship_control : MonoBehaviour {
         if (Input.GetKey(KeyCode.DownArrow))
         {
             gameObject.transform.position += new Vector3(0, -0.1f, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Vector3 pos = gameObject.transform.position + new Vector3(0, 0.6f, 0);
+
+            Instantiate(Bullet, pos, gameObject.transform.rotation);
+
         }
 
     }
