@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ship_control : MonoBehaviour {
+public class shipcontril : MonoBehaviour {
 
     public GameObject Bullet;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKey(KeyCode.RightArrow))
         {
             gameObject.transform.position += new Vector3(0.1f, 0, 0);
