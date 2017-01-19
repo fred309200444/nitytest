@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour {
+public class enemy : MonoBehaviour
+{
 
     public GameObject explo;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        gameObject.transform.position += new Vector3(Random.Range(0.2f,-0.2f), -0.01f, 0);
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        gameObject.transform.position += new Vector3(Random.Range(0.2f, -0.2f), -0.01f, 0);
 
     }
     void OnTriggerEnter2D(Collider2D col) //名為col的觸發事件
