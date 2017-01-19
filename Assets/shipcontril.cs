@@ -5,6 +5,8 @@ using UnityEngine;
 public class shipcontril : MonoBehaviour {
 
     public GameObject Bullet;
+    public GameObject Boom;
+    static bool boomexist;
 
     // Use this for initialization
     void Start()
@@ -37,6 +39,14 @@ public class shipcontril : MonoBehaviour {
 
             Instantiate(Bullet, pos, gameObject.transform.rotation);
 
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Vector3 pos = gameObject.transform.position + new Vector3(0, 4, 0);
+
+            Instantiate(Boom, pos, gameObject.transform.rotation);
+            boomexist = true;
+            
         }
 
     }

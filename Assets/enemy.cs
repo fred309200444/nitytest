@@ -21,10 +21,13 @@ public class enemy : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col) //名為col的觸發事件
     {
-        if (col.tag == "plane" || col.tag == "Bullet") //如果碰撞的標籤是Ship或Bullet
+        if (col.tag == "plane" || col.tag == "Bullet"||col.tag =="boom") //如果碰撞的標籤是Ship或Bullet
         {
-            Destroy(col.gameObject); //消滅碰撞的物件
             Destroy(gameObject); //消滅物件本身
+            if (col.tag == "plane" || col.tag == "bullet")
+            {
+                Destroy(col.gameObject); //消滅碰撞的物件
+            }
 
             Instantiate(explo, transform.position, transform.rotation); //在外星人的位置產生爆炸
 
