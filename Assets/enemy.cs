@@ -24,11 +24,7 @@ public class enemy : MonoBehaviour
         if (col.tag == "plane" || col.tag == "Bullet"||col.tag =="boom") //如果碰撞的標籤是Ship或Bullet
         {
             Destroy(gameObject); //消滅物件本身
-            if (col.tag == "plane" || col.tag == "bullet")
-            {
-                Destroy(col.gameObject); //消滅碰撞的物件
-            }
-
+            Destroy(col.gameObject); //消滅碰撞的物件
             Instantiate(explo, transform.position, transform.rotation); //在外星人的位置產生爆炸
 
             if (col.tag == "Ship") //如果碰撞的標籤是Ship

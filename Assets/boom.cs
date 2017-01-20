@@ -11,10 +11,7 @@ public class boom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (shipcontril.boomexist == true && Input.GetKeyDown(KeyCode.B))
-        {
-            Destroy(gameObject);
-        }
+        
 
     }
 }
